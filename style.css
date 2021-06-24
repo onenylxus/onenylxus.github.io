@@ -1,4 +1,206 @@
 /* Root properties */
 :root {
+  /* Font variables (smaller screens) */
+  --default-font: 'Poppins', sans-serif;
+
+  --medium-font-weight: 500;
+  --semi-bold-font-weight: 600;
+
+  --large-font-size: 2rem;
+  --medium-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --tiny-font-size: 0.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+
+  /* Color variables */
+  --hue: 200;
+
+  --primary-color: hsl(var(--hue), 69%, 61%);
+  --primary-color-alt: hsl(var(--hue), 57%, 53%);
+  --primary-color-lighten: hsl(var(--hue), 92%, 85%);
+  --title-color: hsl(var(--hue), 8%, 15%);
+  --text-color: hsl(var(--hue), 8%, 45%);
+  --text-color-lighten: hsl(var(--hue), 8%, 65%);
+  --input-color: hsl(var(--hue), 70%, 96%);
+  --body-color: hsl(var(--hue), 60%, 99%);
+  --container-color: #ffffff;
+
+  /* Header variables */
   --header-height: 3rem;
+
+  /* z-index variables */
+  --z-tooltip-index: 10;
+  --z-fixed-index: 100;
+  --z-modal-index: 1000;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    /* Font variables (larger screens) */
+    --large-font-size: 3rem;
+    --medium-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --tiny-font-size: 0.813rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+  }
+}
+
+/* ------------------------ division ------------------------ */
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--default-font);
+  font-size: var(--medium-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: var(--semi-bold-font-weight);
+  color: var(--title-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------------ division ------------------------ */
+
+/* Common classes style */
+.container {
+  max-width: 768px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+  text-align: center;
+}
+
+.section-subtitle {
+  display: block;
+  margin-bottom: 3rem;
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+/* ------------------------ division ------------------------ */
+
+/* Header styles */
+.header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed-index);
+}
+
+.nav {
+  display: flex;
+  max-width: 968px;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav-logo, .nav-toggle {
+  font-weight: var(--medium-font-size);
+  color: var(--title-color);
+}
+
+.nav-logo:hover, .nav-toggle:hover {
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    width: 100%;
+    bottom: -100%;
+    left: 0;
+    padding: 2rem 1.5rem 4rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    background-color: var(--body-color);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 15%);
+    transition: 0.3s;
+  }
+}
+
+.nav-list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: var(--medium-font-size);
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+.nav-close {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1.3rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.nav-close:hover {
+  color: var(--primary-color-alt);
+}
+
+.show-menu {
+  bottom: 0;
 }
