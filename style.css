@@ -204,3 +204,50 @@ ul {
 .show-menu {
   bottom: 0;
 }
+
+/* ------------------------ division ------------------------ */
+
+/* Home section styles */
+.home-container {
+  gap: 1rem;
+}
+
+.home-content {
+  padding-top: 3.5rem;
+  grid-template-columns: 0.5fr 3fr;
+  align-items: center;
+}
+
+.home-social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+
+.home-icon {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.home-icon:hover {
+  color: var(--primary-color-alt);
+}
+
+.home-text {
+  grid-column: 1/3;
+}
+
+.home-title {
+  font-size: var(--large-font-size);
+}
+
+.home-subtitle {
+  font-weight: var(--medium-font-weight);
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.home-description {
+  margin-bottom: 2rem;
+}
