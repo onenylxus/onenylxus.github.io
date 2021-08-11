@@ -5,7 +5,7 @@
 <head>
   <!-- Meta tags -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
   <title>Nicholas Ng</title>
 
   <!-- Google Fonts -->
@@ -75,16 +75,31 @@
               <i class="uil uil-github-alt"></i>
             </a>
 
-            <a href="https://www.instagram.com/onenylxus" class="home-icon" target="_blank">
-              <i class="uil uil-instagram"></i>
+            <a href="https://twitter.com/onenylxus" class="home-icon" target="_blank">
+              <i class="uil uil-twitter-alt"></i>
             </a>
           </div>
 
-          <div class="home-image"></div>
+          <div class="home-image">
+            <svg class="home-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <mask id="blob-mask" mask-type="alpha">
+                <path
+                  d="M60.7,-58.5C76.7,-44.7,86.4,-22.3,84.3,-2.1C82.2,18.1,68.3,36.2,52.3,52.1C36.2,67.9,18.1,81.4,-1.9,83.3C-22,85.3,-44,75.6,-58.9,59.8C-73.9,44,-81.7,22,-82.3,-0.6C-82.8,-23.1,-76.1,-46.2,-61.1,-60.1C-46.2,-73.9,-23.1,-78.5,-0.4,-78.1C22.3,-77.7,44.7,-72.4,60.7,-58.5Z"
+                  transform="translate(100 100)" />
+              </mask>
+            
+              <g mask="url(#blob-mask)">
+                <path
+                  d="M60.7,-58.5C76.7,-44.7,86.4,-22.3,84.3,-2.1C82.2,18.1,68.3,36.2,52.3,52.1C36.2,67.9,18.1,81.4,-1.9,83.3C-22,85.3,-44,75.6,-58.9,59.8C-73.9,44,-81.7,22,-82.3,-0.6C-82.8,-23.1,-76.1,-46.2,-61.1,-60.1C-46.2,-73.9,-23.1,-78.5,-0.4,-78.1C22.3,-77.7,44.7,-72.4,60.7,-58.5Z"
+                  transform="translate(100 100)" />
+                <image class="blob-image" x="12" y="18" xlink:href="assets/home.png" />
+              </g>
+            </svg>
+          </div>
 
           <div class="home-text">
             <h1 class="home-title">Nicholas Ng</h1>
-            <h3 class="home-subtitle">20, University Student</h3>
+            <h3 class="home-subtitle">21, University Student</h3>
             <p class="home-description">Major in Mathematics, potential minor in Computer Science and Spanish.</p>
 
             <a href="#contact" class="button button-flex">
@@ -94,8 +109,9 @@
 
           <div class="home-scroll">
             <a href="#about" class="scroll-button button-flex">
+              <i class="uil uil-mouse-alt home-scroll-mouse"></i>
+              <span class="home-scroll-text">Scroll down</span>
               <i class="uil uil-arrow-down home-scroll-arrow"></i>
-              <span class="home-scroll-text">About me</span>
             </a>
           </div>
         </div>
