@@ -422,7 +422,7 @@ ul {
   width: 100%;
 }
 
-.skills-css, .skills-c-cplusplus, .skills-python, .skills-adobe-photoshop, .skills-adobe-illustrator, .skills-adobe-premiere, .skills-putonghua {
+.skills-css, .skills-c-cplusplus, .skills-python, .skills-adobe-photoshop, .skills-adobe-illustrator, .skills-adobe-premiere-pro, .skills-putonghua {
   width: 80%;
 }
 
@@ -442,4 +442,113 @@ ul {
 
 .skills-open .skills-arrow {
   transform: rotate(180deg);
+}
+
+/* ------------------------ division ------------------------ */
+
+/* Projects section styles */
+.projects-container {
+  overflow: initial;
+}
+
+.projects-content {
+  padding: 0 1.5rem;
+}
+
+.projects-image {
+  width: 265px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.projects-title {
+  margin-bottom: 0.5rem;
+  font-size: var(--h3-font-size);
+}
+
+.projects-description {
+  margin-bottom: 0.75rem;
+}
+
+.projects-button:hover .button-icon {
+  transform: translateX(0.25rem);
+}
+
+.projects-swiper-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: '';
+}
+
+.swiper-button-next {
+  right: -0.5rem;
+}
+
+.swiper-button-prev {
+  left: -0.5rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+
+.swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet {
+  outline: none;
+}
+
+/* ------------------------ division ------------------------ */
+
+/* Contact section styles */
+.contact-container {
+  row-gap: 3rem;
+}
+
+.contact-information {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  margin-right: 0.75rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.contact-title {
+  font-weight: var(--medium-font-weight);
+  font-size: var(--h3-font-size);
+}
+
+.contact-subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-lighten);
+}
+
+.contact-content {
+  padding: 0.75rem 1rem 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--input-color);
+}
+
+.contact-input {
+  width: 100%;
+  border: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+  outline: none;
+  font-family: var(--default-font);
+  font-size: var(--medium-font-size);
+  background-color: var(--input-color);
+  color: var(--text-color);
+}
+
+.contact-label {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
 }

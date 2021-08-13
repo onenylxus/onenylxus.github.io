@@ -33,9 +33,27 @@ qsa('.nav-link').forEach((link) => link.addEventListener('click', () => {
 // Toggle skills
 qsa('.skills-header').forEach((header) => header.addEventListener('click', () => {
   qsa('.skills-content').forEach((content) => {
-    content.className = "skills-content skills-close";
+    content.className = 'skills-content skills-close';
   });
   if (header.parentNode.className === 'skills-content skills-close') {
     header.parentNode.className = 'skills-content skills-open';
   }
 }));
+
+/* ------------------------ division ------------------------ */
+
+// Swipe projects
+const swiper = new Swiper('.projects-container', {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  mousewheel: true,
+  keyboard: true
+});
