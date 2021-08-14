@@ -25,7 +25,6 @@
   --text-color-lighten: hsl(var(--hue), 8%, 65%);
   --input-color: hsl(var(--hue), 70%, 96%);
   --body-color: hsl(var(--hue), 60%, 99%);
-  --container-color: #ffffff;
 
   /* Header variables */
   --header-height: 3rem;
@@ -227,6 +226,14 @@ ul {
 
 .show-menu {
   bottom: 0;
+}
+
+.active-link {
+  color: var(--primary-color);
+}
+
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 15%);
 }
 
 /* ------------------------ division ------------------------ */
@@ -551,4 +558,87 @@ ul {
 .contact-label {
   font-size: var(--small-font-size);
   color: var(--title-color);
+}
+
+/* ------------------------ division ------------------------ */
+
+/* Footer styles */
+.footer {
+  padding-top: 2rem;
+}
+
+.footer-container {
+  row-gap: 3.5rem;
+}
+
+.footer-background {
+  padding: 2rem 0 3rem;
+  background-color: var(--primary-color-alt);
+}
+
+.footer-title {
+  margin-bottom: 0.25rem;
+  font-size: var(--h1-font-size);
+}
+
+.footer-subtitle {
+  font-size: var(--small-font-size);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.footer-link:hover {
+  color: var(--primary-color-lighten);
+}
+
+.footer-social {
+  margin-right: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.footer-social:hover {
+  color: var(--primary-color-lighten);
+}
+
+.footer-text {
+  margin-top: 3rem;
+  font-size: var(--tiny-font-size);
+  text-align: center;
+  color: var(--text-color-lighten);
+}
+
+.footer-title, .footer-subtitle, .footer-link, .footer-social {
+  color: #ffffff;
+}
+
+/* ------------------------ division ------------------------ */
+
+/* Scroll up button styles */
+.scrollup {
+  position: fixed;
+  bottom: -20%;
+  right: 1rem;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+  z-index: var(--z-tooltip-index);
+  transition: 0.3s;
+}
+
+.scrollup:hover {
+  background-color: var(--primary-color-alt);
+}
+
+.scrollup-icon {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.show-scrollup {
+  bottom: 5rem;
 }
