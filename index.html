@@ -25,6 +25,8 @@
   <script type="text/javascript" src="main.js" defer></script>
 </head>
 
+<!-------------------------- divider -------------------------->
+
 <body>
   <!-- Header -->
   <header class="header">
@@ -57,12 +59,16 @@
       </div>
 
       <div class="nav-buttons">
+        <i class="uil uil-moon theme-changer"></i>
+
         <div class="nav-toggle">
           <i class="uil uil-apps"></i>
         </div>
       </div>
     </nav>
   </header>
+
+  <!-------------------------- divider -------------------------->
 
   <!-- Main -->
   <main>
@@ -110,24 +116,26 @@
               Contact me <i class="uil uil-message button-icon"></i>
             </a>
           </div>
+        </div>
 
-          <div class="home-scroll">
-            <a href="#about" class="scroll-button button-flex">
-              <i class="uil uil-mouse-alt home-scroll-mouse"></i>
-              <span class="home-scroll-text">Scroll down</span>
-              <i class="uil uil-arrow-down home-scroll-arrow"></i>
-            </a>
-          </div>
+        <div class="home-scroll">
+          <a href="#about" class="scroll-button button-flex">
+            <i class="uil uil-mouse-alt home-scroll-mouse"></i>
+            <span class="home-scroll-text">Scroll down</span>
+            <i class="uil uil-arrow-down home-scroll-arrow"></i>
+          </a>
         </div>
       </div>
     </section>
+
+    <!-------------------------- divider -------------------------->
 
     <!-- About section -->
     <section class="about section" id="about">
       <h2 class="section-title">About</h2>
       <span class="section-subtitle">My introduction</span>
 
-      <div class="about-conatiner container grid">
+      <div class="about-container container grid">
         <img src="assets/about.jpg" alt="" class="about-image" />
         <div class="about-text">
           <p class="about-description">
@@ -136,7 +144,7 @@
           </p>
           <div class="about-info">
             <div>
-              <span class="info-title">300+</span>
+              <span class="info-title">350+</span>
               <span class="info-name">Contributions <br> last year</span>
             </div>
 
@@ -159,6 +167,8 @@
         </div>
       </div>
     </section>
+
+    <!-------------------------- divider -------------------------->
 
     <!-- Skills section -->
     <section class="skills section" id="skills">
@@ -327,6 +337,8 @@
       </div>
     </section>
 
+    <!-------------------------- divider -------------------------->
+
     <!-- Projects section -->
     <section class="projects section" id="projects">
       <h2 class="section-title">Projects</h2>
@@ -380,6 +392,8 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
+
+    <!-------------------------- divider -------------------------->
     
     <!-- Contact section -->
     <section class="contact section" id="contact">
@@ -413,37 +427,40 @@
           </div>
         </div>
 
-        <form action="" class="contact-form grid">
+        <form action="https://formsubmit.co/nicholasng6237@gmail.com" method="POST" class="contact-form grid">
           <div class="contact-inputs grid">
             <div class="contact-content">
               <label for="" class="contact-label">Name</label>
-              <input type="text" class="contact-input">
+              <input type="text" name="name" class="contact-input" required>
             </div>
 
             <div class="contact-content">
               <label for="" class="contact-label">Email</label>
-              <input type="email" class="contact-input">
+              <input type="email" name="email" class="contact-input" required>
             </div>
           </div>
 
           <div class="contact-content">
             <label for="" class="contact-label">Subject</label>
-            <input type="text" class="contact-input">
+            <input type="text" name="_subject" class="contact-input" required>
           </div>
           <div class="contact-content">
             <label for="" class="contact-label">Message</label>
-            <textarea name="" id="" cols="0" rows="7" class="contact-input"></textarea>
+            <textarea name="message" id="" cols="0" rows="7" class="contact-input"></textarea>
           </div>
 
           <div>
-            <a href="#" class="button button-flex">
+            <a href="javascript:{}" onclick="document.querySelector('button').click();" type="submit" class="button button-flex">
               Send message <i class="uil uil-message button-icon"></i>
             </a>
+            <button type="submit"></button>
           </div>
         </form>
       </div>
     </section>
   </main>
+
+  <!-------------------------- divider -------------------------->
 
   <!-- Footer -->
   <footer class="footer">

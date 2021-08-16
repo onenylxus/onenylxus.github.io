@@ -1,10 +1,14 @@
-// Snippet function for HTML elements
+// Snippet functions for HTML elements
 function qs(sel) {
   return document.querySelector(sel);
 }
 
 function qsa(sel) {
   return document.querySelectorAll(sel);
+}
+
+function ct(cond) {
+  return cond ? 'add' : 'remove';
 }
 
 /* ------------------------ division ------------------------ */
@@ -33,11 +37,7 @@ window.addEventListener('scroll', () => {
   const dy = window.pageYOffset;
   qsa('section[id]').forEach((section) => {
     const h = section.offsetHeight, t = section.offsetTop - 50, id = section.getAttribute('id');
-    if (dy > t && dy <= t + h) {
-      qs(`.nav-menu a[href*=${id}]`).classList.add('active-link');
-    } else {
-      qs(`.nav-menu a[href*=${id}]`).classList.remove('active-link');
-    }
+    qs(`.nav-menu a[href*=${id}]`).classList[ct(dy > t && dy <= t + h)]('active-link');
   });
 });
 
@@ -73,18 +73,24 @@ const swiper = new Swiper('.projects-container', {
 
 // Change background header
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= 80) {
-    qs('.header').classList.add('scroll-header');
-  } else {
-    qs('.header').classList.remove('scroll-header');
-  }
+  qs('.header').classList[ct(window.scrollY >= 80)]('scroll-header');
 });
 
 // Toggle scroll up button
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= 600) {
-    qs('.scrollup').classList.add('show-scrollup');
-  } else {
-    qs('.scrollup').classList.remove('show-scrollup');
-  }
+  qs('.scrollup').classList[ct(window.scrollY >= 600)]('show-scrollup');
+});
+
+/* ------------------------ division ------------------------ */
+
+// Toggle theme
+if (localStorage.getItem('theme')) {
+  document.body.classList[ct(localStorage.getItem('theme') === 'dark')]('dark-theme');
+  qs('.theme-changer').classList[ct(localStorage.getItem('theme') === 'dark')]('uil-sun');
+}
+
+qs('.theme-changer').addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  qs('.theme-changer').classList.toggle('uil-sun');
+  localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
 });
