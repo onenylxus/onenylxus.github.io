@@ -1,0 +1,38 @@
+baseURL: https://onenylxus.github.io
+languageCode: en-us
+title: Nicholas Ng
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: false
+  footer:
+    displayCopyright: true
+    displayPoweredBy: false
+
+menu:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 1
+    - name: About
+      pageRef: /about
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: "https://github.com/onenylxus"
+      params:
+        icon: github
